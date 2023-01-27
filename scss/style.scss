@@ -1,0 +1,94 @@
+//Variables
+
+$color-primario: #55A;
+$color-secundario: #6B6;
+$color-texto: #666;
+$padding-simple: 10px;
+$padding-doble: 20px;
+$fuente-normal: 1em;
+$fuente-pequena: 0.8em;
+$fuente-grande: 1.4em;
+$fuente-general: arial, verdana, sans-serif;
+$fuente-secundaria: 'Times New Roman', Times, serif;
+
+//Container
+$color-container: #FFF;
+$color-fuente-container: #000;
+
+//Form
+$tamanyo-form: 300px;
+$padding-form: 12px;
+$margen-form: auto;
+$fuente-bold: bold;
+$tipo-display: inline-block;
+
+//Form Label
+$tamanyo-label: 72px;
+
+//Textarea
+$tamanyo-txtarea: 100%;
+$altura-txtarea: 100px;
+$color-txtarea: #ffff;
+$colorLetra-txtarea: #000;
+
+
+
+//Usar Variables ejemplo
+body{
+    color: $color-texto;
+    font-family: $fuente-general;
+}
+
+h1{
+    background-color: $color-primario;
+    font-family: $fuente-secundaria;
+    font-size: $fuente-normal;
+    padding: $padding-simple;
+}
+
+
+
+//Utilizar Selectores
+.container{
+    background-color: $color-container;
+}
+
+.container header{
+    background-color: $color-secundario;
+    color: $color-fuente-container;
+}
+
+.container a{
+    color: $color-primario;
+}
+
+form{
+    width: $tamanyo-form;
+    padding: $padding-form;
+    border-radius: 10px;
+    margin: $margen-form;
+    background-color: $color-container;
+}
+
+form label{
+    width: $tamanyo-label;
+    font-weight: $fuente-bold;
+    display: $tipo-display;
+}
+
+textarea{
+    width: $tamanyo-txtarea;
+    height: $altura-txtarea;
+    background-color: $color-txtarea;
+    color: $colorLetra-txtarea;
+}
+
+
+//Operaciones SASS
+
+
+
+
+
+
+

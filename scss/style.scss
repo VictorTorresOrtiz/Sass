@@ -99,10 +99,116 @@ textarea{
    
 }
 
-.containerOperaciones a{
-    color: 21 - 11 = 11;  //(Azul);
-    
+
+
+//Funciones
+
+
+
+//Mixins
+
+@mixin color-invertido {
+    background-color: #111;
+    color: #eee;
+  }
+
+.containerMixins h1.invertido{
+    font-size: 1.3em;
+    padding: 15px;
+    @include color-invertido;
 }
+
+
+
+@mixin encabezados($tamano) {
+    h1 {
+      font-size: $tamano;
+    }
+    h2 {
+      font-size: $tamano - 0.2;
+    }
+    h3 {
+      font-size: $tamano - 0.5;
+    }
+  }
+
+@include encabezados(1.5em);
+@media(min-width: 800px) {
+  @include encabezados(2em);
+}
+@media(min-width: 1200px) {
+  @include encabezados(2.5em);
+}
+
+@mixin threed-button($base-color){
+    $shadow: "";
+  
+    @for $i from 1 through 4{
+      $shadow: $shadow + "#{$i}px #{$i}px 0px 2px " + darken($base-color,$i*5) + ",";
+    } 
+  
+    $shadow : str-slice($shadow,0,str-length($shadow)-1);
+    appearance: none;
+    border:none;
+    background: $base-color;
+    box-shadow: unquote($shadow);
+  }
+  button{
+    @include threed-button(#ff4081);
+    font-size:18px;
+    color:white;
+  }
+
+  // Tranformaciones default
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+      -o-transform: $transforms;
+     -ms-transform: $transforms;
+ -webkit-transform: $transforms;
+       transform: $transforms;
+}
+// Rotamos
+@mixin rotate ($deg) {
+@include transform(rotate(#{$deg}deg));
+}
+
+// Escalamos
+@mixin scale($scale) {
+  @include transform(scale($scale));
+} 
+// Transladamos el cuadrado
+@mixin translate ($x, $y) {
+@include transform(translate($x, $y));
+}
+
+@mixin skew ($x, $y) {
+@include transform(skew(#{$x}deg, #{$y}deg));
+}
+//Hacemos el transforms del original
+@mixin transform-origin ($origin) {
+ moz-transform-origin: $origin;
+      -o-transform-origin: $origin;
+     -ms-transform-origin: $origin;
+ -webkit-transform-origin: $origin;
+       transform-origin: $origin;
+}
+
+//Clase test para visualizar el cuadrado
+.test {
+@include skew(25,10);
+@include transform-origin(top left);
+position: absolute;
+top: 25%;
+bottom: 25%;
+left: 25%;
+right: 25%;
+background-color: rgba(20,20,20,.5);
+}
+
+//Bucles
+
+
+
 
 
 

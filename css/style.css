@@ -53,6 +53,69 @@ textarea {
   width: 22px;
 }
 
-.containerOperaciones a {
-  color: 10;
+.containerMixins h1.invertido {
+  font-size: 1.3em;
+  padding: 15px;
+  background-color: #111;
+  color: #eee;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+@media (min-width: 800px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 2.3em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+}
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: #ff4081;
+  -webkit-box-shadow: 1px 1px 0px 2px #ff2770,2px 2px 0px 2px #ff0d5f,3px 3px 0px 2px #f30053,4px 4px 0px 2px #d9004a;
+          box-shadow: 1px 1px 0px 2px #ff2770,2px 2px 0px 2px #ff0d5f,3px 3px 0px 2px #f30053,4px 4px 0px 2px #d9004a;
+  font-size: 18px;
+  color: white;
+}
+
+.test {
+  -webkit-transform: skew(25deg, 10deg);
+  transform: skew(25deg, 10deg);
+  moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  left: 25%;
+  right: 25%;
+  background-color: rgba(20, 20, 20, 0.5);
 }

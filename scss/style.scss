@@ -222,7 +222,7 @@ background-color: rgba(20,20,20,.5);
 @for $i from 1 through 10{ //Crear un bucle que genere 10 divs consecutivamente
     div:nth-child(#{$i}){ // y que sean de color rojo
         order: $i;
-        background: darken($color: red, $i * 2)
+        background: darken($color:  blue, $i * 2)
     }
 }
 

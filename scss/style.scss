@@ -207,6 +207,25 @@ background-color: rgba(20,20,20,.5);
 
 //Bucles
 
+@function isMultiple10($i){   // Función que comprueba si un numero es multiple de 10
+    @return ($i % 10 == 0);   // Si el resto es 0, lo es.
+}
+@for $i from 10 through 100{  // Bucle que va de 10 a 100
+    @if(isMultiple10($i)){    // y por cada numero comprobará si es multiple de 10
+        .test-#{$i}{        // en caso afirmativo creara la clase .test-xx
+            height: 0px + $i; // con un tamaño relativo al numero por el que avanza el bucle
+        }
+    }
+}
+
+
+@for $i from 1 through 10{ //Crear un bucle que genere 10 divs consecutivamente
+    div:nth-child(#{$i}){ // y que sean de color rojo
+        order: $i;
+        background: darken($color: red, $i * 2)
+    }
+}
+
 
 
 

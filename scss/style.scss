@@ -227,6 +227,51 @@ background-color: rgba(20,20,20,.5);
 }
 
 
+//Anidación
+
+.anidacion {
+  background-color: red;
+
+  header {
+    background-color: black;
+    color: #fff;  
+
+    a {
+      color: #ff6;
+    }
+  }
+}
+
+
+a {
+     text-decoration:none;
+     
+     &:hover {
+          text-decoration:underline;
+          color:blue;      
+    }
+ 
+     &:active{
+          font-weight:bold;
+     }
+    }
+
+  //Ejemplos Include
+
+  @mixin transformar($propiedad) {
+    -webkit-transform: $propiedad;
+    -ms-transform: $propiedad;
+    transform: $propiedad;
+  }
+
+  .escalada {
+    @include transformar(scale(2, 3))
+  }
+  
+  h1 {
+    color: blue;
+    @include transformar(rotate(22deg))
+  }
 
 
 

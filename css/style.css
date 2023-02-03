@@ -109,7 +109,6 @@ button {
 .test {
   -webkit-transform: skew(25deg, 10deg);
   transform: skew(25deg, 10deg);
-  moz-transform-origin: top left;
   -webkit-transform-origin: top left;
   transform-origin: top left;
   position: absolute;
